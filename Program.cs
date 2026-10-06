@@ -121,15 +121,29 @@
 // Console.WriteLine(balls);
 
 //№6
-Console.WriteLine("Введите роль пользователя (admin, teacher, user): ");
-string role = Console.ReadLine();
-bool isTeacher = false;
-string rolee = role switch {
-    "admin" => "Полный доступ",
-    "user" => "Ограниченный доступ",
-    "teacher" when !isTeacher => "Требуется подтвержение",
-    "teacher" => "Доступ преподавателя",
-    _ => "Доступ запрещен"
+// Console.WriteLine("Введите роль пользователя (admin, teacher, user): ");
+// string role = Console.ReadLine();
+// bool isTeacher = false;
+// string rolee = role switch {
+//     "admin" => "Полный доступ",
+//     "user" => "Ограниченный доступ",
+//     "teacher" when !isTeacher => "Требуется подтвержение",
+//     "teacher" => "Доступ преподавателя",
+//     _ => "Доступ запрещен"
+// };
+
+// Console.WriteLine(rolee);
+
+
+//дополнительное задание:
+
+int number = 42;
+string result = number switch {
+    < 0 => "Отрицательное",
+    1 or 2 or 3 => "Маленькое число",
+    >= 0 and <= 9 => "Однозначное",
+    >= 10 and <= 99 => "Двузначное",
+    >= 100 => "Трехзначное или больше"
 };
 
-Console.WriteLine(rolee);
+Console.WriteLine(result);
