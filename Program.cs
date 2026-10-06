@@ -27,14 +27,109 @@
 // }
 
 
-int temperature = 27;
+// int temperature = 27;
 
-string temp = temperature switch {
-    >= 35 => "Очень жарко",
-    >= 25 => "Жарко",
-    >= 15 => "Комфортно",
-    >= 0 => "Прохладно",
-    < 0 => "Мороз"
+// string temp = temperature switch {
+//     >= 35 => "Очень жарко",
+//     >= 25 => "Жарко",
+//     >= 15 => "Комфортно",
+//     >= 0 => "Прохладно",
+//     < 0 => "Мороз"
+// };
+
+// Console.WriteLine(temp);
+
+// string role = "teacher";
+
+// string result = role switch {
+//     "admin" => "Полный доступ",
+//     "teacher" => "Доступ преподавателя",
+//     _ => "Ограниченный доступ"
+// };
+
+// Console.WriteLine(result);
+
+
+// int age = 20;
+// bool hasTicket = true;
+
+// switch (age) {
+//     case >= 18 when hasTicket:
+//         Console.WriteLine("Вход разрешен");
+//         break;
+//     case >= 18:
+//         Console.WriteLine("Нет билета");
+//         break;
+//     default:
+//         Console.WriteLine("Возраст не подходит");
+//         break;
+// }
+
+
+// int level = 2;
+
+// switch (level) {
+//     case 1: 
+//         Console.WriteLine("Начальный уровень");
+//         break;
+//     case 2:
+//         Console.WriteLine("Средний уровень");
+//         break;
+//     case 3:
+//         Console.WriteLine("Продвинутый уровень");
+//         break;
+// }
+
+// //Задача A:
+
+// Console.Write("Введите номер месяца (1-12): ");
+// int num = int.Parse(Console.ReadLine());
+// string result = num switch {
+//     12 or 1 or 2 => "Зима",
+//     3 or 4 or 5 => "Весна",
+//     6 or 7 or 8 => "Лето",
+//     9 or 10 or 11 => "Осень",
+//     _ => "Неверный месяц"
+// };
+
+// Console.WriteLine(result);
+
+//задача В
+// Console.Write("Введите номер дня недели (1-7): ");
+// int number = int.Parse(Console.ReadLine());
+// string result = number switch {
+//     >= 1 and <= 5 => "Будний",
+//     >= 6 and <= 7 => "Выходной",
+//     _ => "Неверный день недели"
+// };
+
+// Console.WriteLine(result);
+
+//инд.вариант №2 и №6
+//№2
+// Console.Write("Введите число от 0 до 100: ");
+// int number = int.Parse(Console.ReadLine());
+
+// string balls = number switch {
+//     >= 0 and <= 39 => "Неудовлетворительно", 
+//     >= 40 and <= 59 => "Удовлетворительно",
+//     >= 60 and <= 79 => "Хорошо",
+//     >= 80 and <= 100 => "Отлично",
+//     _ => "Ошибка"
+// };
+
+// Console.WriteLine(balls);
+
+//№6
+Console.WriteLine("Введите роль пользователя (admin, teacher, user): ");
+string role = Console.ReadLine();
+bool isTeacher = false;
+string rolee = role switch {
+    "admin" => "Полный доступ",
+    "user" => "Ограниченный доступ",
+    "teacher" when !isTeacher => "Требуется подтвержение",
+    "teacher" => "Доступ преподавателя",
+    _ => "Доступ запрещен"
 };
 
-Console.WriteLine(temp);
+Console.WriteLine(rolee);
